@@ -14,7 +14,8 @@ typeSchema.virtual('pokemons',{  //virtual permet de definir des relations entre
     foreignField: 'types'
 })
 
-var Pokemon = mongoose.model('Type', typeSchema);
+var Pokemon = mongoose.model('Type', typeSchema); // tu n'exportes pas ton model 
+
 
 
 

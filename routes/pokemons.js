@@ -1,7 +1,7 @@
 var router = require('express').Router();
 
 var Pokemon = require('./../models/Pokemon');
-var Type = require('./../models/Type');
+var Type = require('./../models/Type'); // normal que Type.find soit undefined car Type = {} (object vide (Tu n'as pas exporté Type ))
 
 router.get('/', (req, res)=>{
     Pokemon.find({}).populate('types').then(pokemons => {
